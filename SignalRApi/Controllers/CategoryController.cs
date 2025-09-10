@@ -34,16 +34,16 @@ namespace SignalRApi.Controllers
                 Status = true
             });
             return Ok("Category Saved");
-               
+
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteCategory(int id) 
         {
             var value=_categoryService.TGetByID(id);
             _categoryService.TDelete(value);
-            return Ok(value);
+            return Ok("Category Deleted");
         }
-        [HttpGet("GetCategory")]
+        [HttpGet("{id}")]
         public IActionResult GetCategory(int id) 
         {
             var value=_categoryService.TGetByID(id);
