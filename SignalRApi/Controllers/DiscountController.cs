@@ -40,14 +40,14 @@ namespace SignalRApi.Controllers
             return Ok("Discount Saved");
 
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteDiscount(int id)
         {
             var value = _discountService.TGetByID(id);
             _discountService.TDelete(value);
             return Ok(value);
         }
-        [HttpGet("GetDiscount")]
+        [HttpGet("{id}")]
         public IActionResult GetDiscount(int id)
         {
             var value = _discountService.TGetByID(id);

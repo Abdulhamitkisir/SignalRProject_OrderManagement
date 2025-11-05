@@ -1,4 +1,4 @@
-﻿@model List<ResultAboutDto>
+﻿@model List<ResultSocialMediaDto>
 @{
 	ViewData["Title"] = "Index";
 	Layout = "~/Views/AdminLayout/Index.cshtml";
@@ -6,24 +6,23 @@
 
 <div class="content">
 	<div class="container-fluid">
-		<h4 class="page-title">About Management </h4>
+		<h4 class="page-title">Social Media Management </h4>
 		<div class="row">
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<div class="card-title"> About List</div>
+						<div class="card-title"> Social Media List</div>
 					</div>
 					<div class="card-body">
 						<div class="card-sub">
-							You can perform the About-Related operations below.
+							You can perform the Social Media-Related operations below.
 						</div>
 						<table class="table mt-3">
 							<thead>
 								<tr>
 									<th scope="col">#</th>
 									<th scope="col">Title</th>
-									<th scope="col">Image Url</th>
-									<th scope="col">Description</th>
+									<th scope="col">Url</th>
 									<th scope="col">Delete</th>
 									<th scope="col">Update</th>
 								</tr>
@@ -32,18 +31,17 @@
 								@foreach (var item in Model)
 								{
 									<tr>
-										<td>@item.AboutID</td>
+										<td>@item.SocialMediaID</td>
 										<td>@item.Title</td>
-										<td>@item.ImageUrl</td>
-										<td>@item.Description</td>
-										<td><a href="/About/DeleteAbout/@item.AboutID" class="btn btn-outline-danger">Delete</a></td>
-										<td><a href="/About/UpdateAbout/@item.AboutID" class="btn btn-outline-success">Update</a></td>
+										<td>@item.Url</td>
+										<td><a href="/SocialMedia/DeleteSocialMedia/@item.SocialMediaID" class="btn btn-outline-danger">Delete</a></td>
+										<td><a href="/SocialMedia/UpdateSocialMedia/@item.SocialMediaID" class="btn btn-outline-success">Update</a></td>
 									</tr>
 								}
 
 							</tbody>
 						</table>
-						<a href="/About/CreateAbout/" class="btn btn-primary">New About Add</a>
+						<a href="/SocialMedia/CreateSocialMedia/" class="btn btn-primary">New SocialMedia Add</a>
 					</div>
 				</div>
 			</div>
