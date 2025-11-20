@@ -1,0 +1,5 @@
+﻿--CategoryCount
+--ProductCount
+--Aktif Kategory Count
+--Pasif Category Count
+--

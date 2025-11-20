@@ -29,6 +29,13 @@ namespace SignalRApi.Controllers
             var value = _mapper.Map<List<ResultProductDto>>(_productService.TGetListAll());
             return Ok(value);
         }
+        [HttpGet("ProductCount")]
+        public IActionResult ProductCount()
+        {
+            return Ok(_productService.TProductCount());
+        }
+
+
         [HttpGet("ProductListWithCategory")]
         public IActionResult ProductListWithCategory()
         {
@@ -55,7 +62,7 @@ namespace SignalRApi.Controllers
                 Price = createProductDto.Price,
                 ProductName = createProductDto.ProductName,
                 ProductStatus = createProductDto.ProductStatus,
-                CategoryID=createProductDto.CategoryID
+                CategoryID = createProductDto.CategoryID
             });
             return Ok("Product Saved");
 
@@ -79,7 +86,7 @@ namespace SignalRApi.Controllers
             _productService.TUpdate(new Product()
             {
                 ProductID = updateProductDto.ProductID,
-                ProductName= updateProductDto.ProductName,
+                ProductName = updateProductDto.ProductName,
                 ProductStatus = updateProductDto.ProductStatus,
                 Description = updateProductDto.Description,
                 ImageUrl = updateProductDto.ImageUrl,
