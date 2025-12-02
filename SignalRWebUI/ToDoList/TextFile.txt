@@ -2,4 +2,26 @@
 --ProductCount
 --Aktif Kategory Count
 --Pasif Category Count
---
+
+--Category Adina Göre Ürün Sayisi 1
+--Category Adina Göre Ürün Sayisi 2
+
+--Ortalama Fiyat 
+--En Yüksek Fiyatli Ürün
+--En Düsük Fiyatli Ürün
+--Ortalama Hamburger Fiyati
+
+
+--Toplam Siparis Sayisi ok
+--Aktif Siparis Sayisi ok 
+--Son Siparis Tutari   ok
+
+--Kasadaki Tutar ok
+--Bugunki Kazanc
+--Masa Sayisi ok
+
+
+
+------------------------------------------------
+Statistic Consume
+
